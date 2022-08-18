@@ -1,0 +1,24 @@
+
+blockquote {
+  quotes: "\201c" "\201d" "\2018" "\2019";
+  @apply  block p-6 text-2xl no-underline break-normal leading-6 font-light; 
+  &:before {
+    content: open-quote;
+    @apply relative left-0 top-4 -ml-4 font-light text-5xl;
+
+  }
+  &:after {
+    content: close-quote;
+    font-size: 0;
+    line-height: 0;
+    @apply ml-0
+  }
+}
+div {
+  &.quote-author {
+    @apply pl-2 text-base font-semibold text-gray-600;
+  }
+  &.quote-title {
+    @apply pl-2 text-sm text-gray-400;
+  }
+}
